@@ -34,7 +34,7 @@ public class Verification {
         }
     }
 
-    public boolean calculate() {
+    public boolean verifyCalculation() {
         String answer = consoleReader.read();
         while (true) {
             if (answer.equals("Yes"))
@@ -43,7 +43,7 @@ public class Verification {
                 return false;
             else {
                 System.out.println("Enter correct answer!");
-                return calculate();
+                return verifyCalculation();
             }
 
         }

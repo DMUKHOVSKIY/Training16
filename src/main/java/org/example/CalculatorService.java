@@ -1,9 +1,9 @@
 package org.example;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class CalculatorImpl implements Calculator {
+@Service
+public class CalculatorService implements Calculator {
 
     @Override
     public double calc(double a, double b, int operation) {

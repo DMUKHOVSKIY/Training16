@@ -1,7 +1,6 @@
 package org.example;
 
 import org.springframework.stereotype.Component;
-import org.w3c.dom.ls.LSOutput;
 
 @Component
 public class ConsoleApplication {
@@ -15,8 +14,8 @@ public class ConsoleApplication {
     private static final String WORK = "Do you want to continue?(Write Yes/No)";
 
     private Calculator calculatorImpl;
-    private ConsoleWriter consoleWriter;
-    private ConsoleReader consoleReader;
+    private Writer consoleWriter;
+    private Reader consoleReader;
     private Verification verification;
 
 
@@ -37,7 +36,7 @@ public class ConsoleApplication {
             int operation = verification.verifyOperation();
             System.out.println(calculatorImpl.calc(a, b, operation));
             consoleWriter.write(WORK);
-        } while (verification.calculate());
+        } while (verification.verifyCalculation());
     }
 
 
